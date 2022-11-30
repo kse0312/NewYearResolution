@@ -1,0 +1,19 @@
+body{
+    margin: 0px;
+    background-color: #A4AEB7
+}
+#header{
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #41444D;
+}
+#container{
+    height: 1130px;
+    margin: 0 auto;
+}
+#footer{
+    height: 100px;
+    background-color: #41444D;
+}
