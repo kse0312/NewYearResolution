@@ -1,22 +1,25 @@
-import java.io.*;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.Socket;
 
-public class GetThread implements Runnable{
-    // 파일 요청이 없을 경우의 기본 파일
+public class PostThread implements Runnable{
     private static final String DEFAULT_FILE_PATH = "index.html";
-
-    // 클라이언트와의 접속 소켓
     private Socket socket;
     private String filePath;
-
-    public GetThread(Socket clientSocket, String filePath){
+    private String content;
+    public PostThread(Socket clientSocket, String filePath,String content){
         this.socket = clientSocket;
         this.filePath = filePath;
+        this.content = content;
     }
     @Override
     public void run() {
+        System.out.println("POST Thread : Ready");
+        System.out.println(content);
         try(DataOutputStream dout = new DataOutputStream(socket.getOutputStream())){
-            System.out.println("GET Thread : DataOutputStream Ready");
+            System.out.println("POST Thread : DataOutputStream Ready");
 
             File file = null;
             if(filePath.length()>1){ file = new File(filePath.substring(1)); }
@@ -38,9 +41,9 @@ public class GetThread implements Runnable{
 
                 dout.writeBytes("\r\n");
                 dout.flush();
-                System.out.println("GET Thread : Print Web Page");
+                System.out.println("POST Thread : Print Web Page");
             }else{
-                System.out.println("GET Thread : RequestFile is not Exist");
+                System.out.println("POST Thread : RequestFile is not Exist");
             }
             socket.close();
         } catch (IOException e) {
