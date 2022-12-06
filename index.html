@@ -8,14 +8,19 @@
         <h2 id="subject">Subject</h2>
     </div>
     <div id="container">
-        <button onclick="location.href='move.html'">
-            click!
-        </button>
-        <form method="post" accept-charset="UTF-8" >
-            <input type="text" name="user_name">
-            <input type="text" name="user_id">
-            <input type="submit">
-        </form>
+        <div id="gallery" style="width:80%;background: #41444D">
+            <script>
+                for(var i =0; i<100;i++){
+                    var image = document.createElement('div');
+                    image.className = "imagec";
+                    image.id = "img"+i;
+                    document.getElementById('gallery').append(image);
+                }
+            </script>
+        </div>
+        <div id="create_div">
+            <button onclick="location.href='/create.html'">create</button>
+        </div>
     </div>
     <div id="footer">
         <p></p>

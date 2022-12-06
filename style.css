@@ -10,10 +10,45 @@ body{
     color: #41444D;
 }
 #container{
-    height: 1130px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #footer{
     height: 100px;
     background-color: #41444D;
+}
+/* ./index  */
+#gallery{
+    text-align: center;
+}
+#create_div{
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+}
+.imagec{
+    min-width: 19%;
+    max-width: 19%;
+    aspect-ratio: 2/3; /* 16:9 비율 지정 */
+    margin: 5px;
+    float: left;
+    background-color: aqua;
+}
+
+/* ./create */
+#page{
+    height: 500px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+#text_table{
+    margin: 0 auto;
+    border: 1px solid black;
+}
+#text_table tr, td{
+    padding: 5px 10px;
 }
