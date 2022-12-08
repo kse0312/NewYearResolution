@@ -1,18 +1,16 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
         try(ServerSocket serverSocket = new ServerSocket(8000)){
             System.out.println("[Server Start] Waiting......................");
-            GetThread getThread;
-            PostThread postThread;
+            Thread getThread;
+            Thread postThread;
 
             while(true) {
                 Socket clientSocket = serverSocket.accept();
@@ -34,20 +32,18 @@ public class Main {
 
                 switch (request[0]) {
                     case "GET" -> {
-                        getThread = new GetThread(clientSocket, request[1]);
-                        getThread.run();
+                        getThread = new Thread(new GetThread(clientSocket, request[1]));
+                        getThread.start();
                     }
                     case "POST" -> {
                         //Body 받기
                         int leng = Integer.parseInt(header.get("Content-Length"));
                         char[] body = new char[leng];
                         reader.read(body,0,leng);
-                        postThread = new PostThread(clientSocket, request[1], body);
-                        postThread.run();
+                        postThread = new Thread(new PostThread(clientSocket, request[1], body));
+                        postThread.start();
                     }
                 }
-                System.out.printf("Client Closed %s:%d]\n",clientSocket.getInetAddress(), clientSocket.getPort());
-                clientSocket.close();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

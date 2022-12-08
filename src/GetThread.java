@@ -43,6 +43,7 @@ public class GetThread implements Runnable{
                 System.out.println("GET Thread : RequestFile is not Exist");
             }
             socket.close();
+            System.out.printf("Client Closed %s:%d]\n",socket.getInetAddress(), socket.getPort());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

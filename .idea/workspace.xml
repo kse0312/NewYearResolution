@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="POST 데이터 받기">
-      <change afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GetThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PostThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +48,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,7 +82,13 @@
       <workItem from="1669960171268" duration="886000" />
       <workItem from="1670302478152" duration="3942000" />
       <workItem from="1670309922595" duration="170000" />
-      <workItem from="1670310106685" duration="4386000" />
+      <workItem from="1670310106685" duration="4694000" />
+      <workItem from="1670376442727" duration="13000" />
+      <workItem from="1670387852448" duration="403000" />
+      <workItem from="1670393006435" duration="295000" />
+      <workItem from="1670393375846" duration="614000" />
+      <workItem from="1670396110741" duration="834000" />
+      <workItem from="1670472142273" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
@@ -95,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669959201128</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성">
+      <created>1670314923054</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670314923054</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="POST 데이터 받기" />
-    <option name="LAST_COMMIT_MESSAGE" value="POST 데이터 받기" />
+    <MESSAGE value="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
