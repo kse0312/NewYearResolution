@@ -1,54 +1,92 @@
 body{
     margin: 0px;
-    background-color: #A4AEB7
+    background: #8FA5BC;
 }
 #header{
-    height: 43px;
+    height: 67px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #41444D;
 }
 #container{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#footer{
-    height: 100px;
-    background-color: #41444D;
-}
-/* ./index  */
-#gallery{
     text-align: center;
 }
+#footer{
+    height: 150px;
+}
+/* ./index  */
+
 #create_div{
     position: fixed;
-    bottom: 10%;
-    right: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 5%;
+    right: 3%;
+}
+#create{
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 45px;
+    font-size: 100px;
+    color: #8D847F;
+}
+#gallery{
+    width: 90%;
+    min-width: 587px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    position: relative;
 }
 .imagec{
-    min-width: 19%;
-    max-width: 19%;
-    aspect-ratio: 2/3; /* 16:9 비율 지정 */
-    margin: 5px;
+    min-width: 273px;
+    aspect-ratio: 2/3;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
     float: left;
-    background-color: aqua;
+    background-color: white;
 }
 
 /* ./create */
 #page{
-    height: 500px;
-    width: 300px;
+    width: 320px;
+    aspect-ratio: 2/3;
     text-align: center;
-    margin: 0 auto;
+    margin:  10px;
     padding: 10px;
+    border: 5px solid #8FA5BC;
     background-color: #FFFFFF;
 }
 #text_table{
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     border: 1px solid black;
 }
 #text_table tr, td{
     padding: 5px 10px;
+}
+#f_subject{
+    text-align: center;
+}
+#f_name{
+    text-align: right;
+}
+#color-picker{
+    background: #8D847F;
+}
+.pick{
+    width: 30px;
+    height: 30px;
+    margin: 10px 5px;
 }

@@ -1,6 +1,7 @@
-<html lang="UTF-8" >
+<html>
 <head>
     <title>Happy New Year</title>
+    <meta content="text/html"  charset="UTF-8">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -8,10 +9,10 @@
         <h2 id="subject">Subject</h2>
     </div>
     <div id="container">
-        <div id="gallery" style="width:80%;background: #41444D">
+        <div id="gallery">
             <script>
-                for(var i =0; i<100;i++){
-                    var image = document.createElement('div');
+                for(let i =0; i<100;i++){
+                    let image = document.createElement('div');
                     image.className = "imagec";
                     image.id = "img"+i;
                     document.getElementById('gallery').append(image);
@@ -19,11 +20,11 @@
             </script>
         </div>
         <div id="create_div">
-            <button onclick="location.href='/create.html'">create</button>
+            <p>CREATE!</p>
+            <button id="create" onclick="location.href='create.html'">+</button>
         </div>
     </div>
     <div id="footer">
-        <p></p>
     </div>
 </body>
 </html>
