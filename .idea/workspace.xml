@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/GetThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/GetThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="게시글 꾸미기 기능 생성 진행 중" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +101,7 @@
       <workItem from="1670485454930" duration="360000" />
       <workItem from="1670558484589" duration="616000" />
       <workItem from="1670559130178" duration="689000" />
-      <workItem from="1670560027665" duration="8959000" />
+      <workItem from="1670560027665" duration="9157000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
@@ -125,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670314923054</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="게시글 꾸미기 기능 생성 진행 중">
+      <created>1670569630920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670569630920</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +169,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="POST 데이터 받기" />
     <MESSAGE value="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성" />
+    <MESSAGE value="게시글 꾸미기 기능 생성 진행 중" />
+    <option name="LAST_COMMIT_MESSAGE" value="게시글 꾸미기 기능 생성 진행 중" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
