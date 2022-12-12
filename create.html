@@ -3,6 +3,9 @@
         <title>Happy New Year</title>
         <meta content="text/html"  charset="UTF-8">
         <link href="style.css" rel="stylesheet">
+        <style>
+
+        </style>
     </head>
     <body>
         <div id="header">
@@ -23,28 +26,30 @@
                             <input type="text" id="f_name" name="user_name" placeholder="Nickname">
                         </td>
                     </tr>
-                    <tr><td>1. </td><td><input class="f_text" type="text" name="text_1"></td></tr>
-                    <tr><td>2. </td><td><input class="f_text" type="text" name="text_2"></td></tr>
-                    <tr><td>3. </td><td><input class="f_text" type="text" name="text_3"></td></tr>
-                    <tr><td>4. </td><td><input class="f_text" type="text" name="text_4"></td></tr>
-                    <tr><td>5. </td><td><input class="f_text" type="text" name="text_5"></td></tr>
-                    <tr><td>6. </td><td><input class="f_text" type="text" name="text_6"></td></tr>
-                    <tr><td>7. </td><td><input class="f_text" type="text" name="text_7"></td></tr>
-                    <tr><td>8. </td><td><input class="f_text" type="text" name="text_8"></td></tr>
-                    <tr><td>9. </td><td><input class="f_text" type="text" name="text_9"></td></tr>
-                    <tr><td>10.</td><td><input class="f_text" type="text" name="text_10"></td></tr>
+                    <tr><td class="numb">1. </td><td><input class="f_text" type="text" name="text_1"></td></tr>
+                    <tr><td class="numb">2. </td><td><input class="f_text" type="text" name="text_2"></td></tr>
+                    <tr><td class="numb">3. </td><td><input class="f_text" type="text" name="text_3"></td></tr>
+                    <tr><td class="numb">4. </td><td><input class="f_text" type="text" name="text_4"></td></tr>
+                    <tr><td class="numb">5. </td><td><input class="f_text" type="text" name="text_5"></td></tr>
+                    <tr><td class="numb">6. </td><td><input class="f_text" type="text" name="text_6"></td></tr>
+                    <tr><td class="numb">7. </td><td><input class="f_text" type="text" name="text_7"></td></tr>
+                    <tr><td class="numb">8. </td><td><input class="f_text" type="text" name="text_8"></td></tr>
+                    <tr><td class="numb">9. </td><td><input class="f_text" type="text" name="text_9"></td></tr>
+                    <tr><td class="numb">10.</td><td><input class="f_text" type="text" name="text_10"></td></tr>
                 </table>
             </div>
             <input id="submit_btn" type="submit" value="제출">
             </form>
         </div>
-        <div id="color-picker">
+        <div id="options">
             <button class="pick" id="pick1" onclick="color_change('white','black','gray')">color 1</button>
             <button class="pick" id="pick2" onclick="color_change('#282C4E','#F3E4BF','#F3E4BF')">color 2</button>
-            <button class="pick" id="pick3" onclick="border_onoff(false)">border_off</button>
-            <button class="pick" id="pick4" onclick="border_onoff(true)">border_on</button>
-            <button class="pick" id="pick5" onclick="line_onoff(false)">line_off</button>
-            <button class="pick" id="pick6" onclick="line_onoff(true)">line_on</button>
+            <button class="pick" id="pick3" onclick="border_onoff(true)">border_on</button>
+            <button class="pick" id="pick4" onclick="border_onoff(false)">border_off</button>
+            <button class="pick" id="pick5" onclick="line_onoff(true)">line_on</button>
+            <button class="pick" id="pick6" onclick="line_onoff(false)">line_off</button>
+            <button class="pick" id="pick7" onclick="border_round(true)">border_round on</button>
+            <button class="pick" id="pick8" onclick="border_round(false)">border_round off</button>
         </div>
         <div id="footer">
             <p></p>
@@ -65,6 +70,14 @@
         }else{
 
             document.getElementById('page').style.borderColor='#8FA5BC';
+        }
+    }
+    function border_round(onoff){
+        if(onoff){
+            document.getElementById('page').style.borderRadius='15px';
+        }else{
+
+            document.getElementById('page').style.borderRadius='0px';
         }
     }
     function line_onoff(onoff){

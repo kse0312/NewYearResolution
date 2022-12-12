@@ -47,16 +47,6 @@ body{
     flex-flow: wrap;
     position: relative;
 }
-.imagec{
-    min-width: 273px;
-    aspect-ratio: 2/3;
-    display: inline-block;
-    position: relative;
-    margin: 10px;
-    float: left;
-    background-color: white;
-}
-
 /* ./create */
 #page{
     width: 320px;
@@ -71,22 +61,39 @@ body{
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    padding-bottom: 5px;
     border: 1px solid black;
 }
 #text_table tr, td{
     padding: 5px 10px;
 }
+input[type="text"]{
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    //border: 0;
+}
 #f_subject{
+    font-size: 17px;
     text-align: center;
 }
 #f_name{
+    font-size: 13px;
+    width: min-content;
+    text-align: right;
+
+}
+.numb{
     text-align: right;
 }
-#color-picker{
+.f_text{
+    width: 95%;
+    height: 100%;
+}
+#options{
     background: #8D847F;
 }
 .pick{
-    width: 30px;
     height: 30px;
     margin: 10px 5px;
 }
