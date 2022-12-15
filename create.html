@@ -47,39 +47,36 @@
                 <input type="hidden" name="bordc">
                 <input type="hidden" name="linec">
             </div>
-
-                <div id="options">
-                    <button class="pick" id="pick1" onclick="color_change('white','black','gray')">1</button>
-                    <button class="pick" id="pick2" onclick="color_change('#282C4E','#F3E4BF','#F3E4BF')">2</button>
-                    <table>
-                        <tr><td>바깥 테두리</td>
-                            <td>
-                                <input type="checkbox" class="switch" id="switch1" onclick="border1_onoff(this.checked)">
-                                <label for="switch1" class="switch_label" id="switch_label1">
-                                    <span id="onf1" class="onf_btn"></span>
-                                </label>
-                            </td></tr>
-                        <tr><td>안 테두리</td>
-                            <td>
-                                <input type="checkbox" class="switch" id="switch2" onclick="border2_onoff(this.checked)" checked>
-                                <label for="switch2" class="switch_label" id="switch_label2">
-                                    <span id="onf2" class="onf_btn"></span>
-                                </label>
-                            </td></tr>
-                        <tr><td>줄</td>
-                            <td>
-                                <input type="checkbox" class="switch" id="switch3" onclick="line_onoff(this.checked)" checked>
-                                <label for="switch3" class="switch_label" id="switch_label3">
-                                    <span id="onf3" class="onf_btn"></span>
-                                </label>
-                            </td></tr>
-                    </table>
-                </div>
             <input id="submit_btn" type="submit" value="제출">
-
             </form>
         </div>
-
+        <div id="options">
+            <button class="pick" id="pick1" onclick="color_change('white','black','gray')">1</button>
+            <button class="pick" id="pick2" onclick="color_change('#282C4E','#F3E4BF','#F3E4BF')">2</button>
+            <table>
+                <tr><td>바깥 테두리</td>
+                    <td>
+                        <input type="checkbox" class="switch" id="switch1" onclick="border1_onoff(this.checked)">
+                        <label for="switch1" class="switch_label" id="switch_label1">
+                            <span id="onf1" class="onf_btn"></span>
+                        </label>
+                    </td></tr>
+                <tr><td>안 테두리</td>
+                    <td>
+                        <input type="checkbox" class="switch" id="switch2" onclick="border2_onoff(this.checked)" checked>
+                        <label for="switch2" class="switch_label" id="switch_label2">
+                            <span id="onf2" class="onf_btn"></span>
+                        </label>
+                    </td></tr>
+                <tr><td>줄</td>
+                    <td>
+                        <input type="checkbox" class="switch" id="switch3" onclick="line_onoff(this.checked)" checked>
+                        <label for="switch3" class="switch_label" id="switch_label3">
+                            <span id="onf3" class="onf_btn"></span>
+                        </label>
+                    </td></tr>
+            </table>
+        </div>
     </body>
 </html>
 <script>
