@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>버블</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Language" content="ko">
+</head>
+<body>
+<canvas id="myCanvas" width="1920" height="720"></canvas>
+</body>
+
+<script>
+    var myCanvas, ctx;
+    var bubbles = [];
+    var timer1;
+
+    function init_game(){
+        myCanvas = document.getElementById("myCanvas");
+        ctx = myCanvas.getContext("2d");
+        myCanvas.addEventListener("mousedown", my_listener);
+        myCanvas.addEventListener("mousemove", my_listener);
+        myCanvas.addEventListener("mouseup", my_listener);
+        myCanvas.addEventListener("mouseout", my_listener);
+
+        timer1=setInterval(my_draw,15);
+
+    }
+
+
+    function my_listener(event){
+        switch(event.type)
+        {
+            case "mousedown":
+                add_bubble(event);
+                break;
+
+            case "mousemove":
+                add_bubble(event);
+                break;
+        }
+    }
+
+
+
+    function add_bubble(event){
+        var click_x=event.pageX - myCanvas.offsetLeft;
+        var click_y=event.pageY - myCanvas.offsetTop;
+        var bub_size=Math.random()*30 + 5;
+        var bub_color=Math.random()*200 + 50;
+
+        bubbles.push(new CBubble(click_x, click_y, bub_size, bub_color));
+    }
+
+
+    function CBubble(_ix, _iy,_size,_color){
+        this.ix = _ix;
+        this.iy = _iy;
+        this.isize = _size;
+        this.icolor = _color;
+
+        this.getAlert = function(){
+            alert(this.ix+","+this.iy);
+        }
+
+        this.bub = function()
+        {
+            if (this.isize>0)
+            {
+                this.isize+=0.5;
+                if (this.isize>60)
+                {
+                    this.isize=0;
+                }
+            }
+        }
+    }
+
+
+    function my_draw()
+    {
+        ctx.beginPath();
+        ctx.fillStyle ="rgb(255,155,155)";
+        ctx.strokeStyle ="rgb(255,155,155)";
+        ctx.fillRect(0,0,myCanvas.width,myCanvas.height);
+
+
+        for (var i=0;i<bubbles.length ; i++ )
+        {
+            if (bubbles[i].isize>0)
+            {
+                ctx.beginPath();
+
+                ctx.fillStyle ="rgb("+bubbles[i].icolor+","+(bubbles[i].isize*3)+","+(bubbles[i].isize*3)+")";
+                ctx.strokeStyle ="rgb("+bubbles[i].icolor+","+(bubbles[i].isize*3)+","+(bubbles[i].isize*3)+")";
+
+                ctx.arc(bubbles[i].ix, bubbles[i].iy, bubbles[i].isize, 0, Math.PI * 2);
+
+                ctx.stroke();
+
+                ctx.fill();
+
+                bubbles[i].bub();
+            }
+        }
+    }
+    window.onload = init_game();
+</script>

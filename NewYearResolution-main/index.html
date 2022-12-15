@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Happy New Year</title>
+    <meta content="text/html"  charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <h2 id="subject">Subject</h2>
+    </div>
+    <div id="container">
+        <div id="gallery">
+            <script>
+                for(let i =0; i<100;i++){
+                    let image = document.createElement('div');
+                    image.className = "imagec";
+                    image.id = "img"+i;
+                    document.getElementById('gallery').append(image);
+                }
+            </script>
+        </div>
+        <div id="create_div">
+            <p>CREATE!</p>
+            <button id="create" onclick="location.href='create.html'">+</button>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+</body>
+</html>

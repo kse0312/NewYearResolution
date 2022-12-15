@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="Object 클래스 사용 x&#10;Linkedhashmap으로 변경 해봄&#10;&#10;create 기능 생성 진행중">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/kse" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2I7BOKK3y0Gg3eB5OffNDvY4FkH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Project/jar/mongo-java-driver-3.12.11.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="" />
+      <created>1669522708622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669522708622</updated>
+      <workItem from="1669522709969" duration="36000" />
+      <workItem from="1669523188760" duration="2818000" />
+      <workItem from="1669683921562" duration="570000" />
+      <workItem from="1669694336740" duration="7497000" />
+      <workItem from="1669708782983" duration="1419000" />
+      <workItem from="1669775924860" duration="3722000" />
+      <workItem from="1669781810820" duration="23000" />
+      <workItem from="1669783361044" duration="6551000" />
+      <workItem from="1669789978884" duration="36000" />
+      <workItem from="1669790379009" duration="3206000" />
+      <workItem from="1669796019316" duration="229000" />
+      <workItem from="1669857274829" duration="12374000" />
+      <workItem from="1669880965451" duration="4396000" />
+      <workItem from="1669959375436" duration="779000" />
+      <workItem from="1669960171268" duration="886000" />
+      <workItem from="1670302478152" duration="3942000" />
+      <workItem from="1670309922595" duration="170000" />
+      <workItem from="1670310106685" duration="4694000" />
+      <workItem from="1670376442727" duration="13000" />
+      <workItem from="1670387852448" duration="403000" />
+      <workItem from="1670393006435" duration="295000" />
+      <workItem from="1670393375846" duration="614000" />
+      <workItem from="1670396110741" duration="834000" />
+      <workItem from="1670472142273" duration="304000" />
+      <workItem from="1670485454930" duration="360000" />
+      <workItem from="1670558484589" duration="616000" />
+      <workItem from="1670559130178" duration="689000" />
+      <workItem from="1670560027665" duration="9157000" />
+      <workItem from="1670569665647" duration="33000" />
+      <workItem from="1670569855045" duration="611000" />
+      <workItem from="1670570481829" duration="3297000" />
+      <workItem from="1670588239126" duration="2928000" />
+      <workItem from="1670594859425" duration="695000" />
+      <workItem from="1670827281818" duration="3782000" />
+      <workItem from="1670839344594" duration="539000" />
+      <workItem from="1671077418801" duration="454000" />
+      <workItem from="1671077898592" duration="10823000" />
+    </task>
+    <task id="LOCAL-00001" summary="POST 데이터 받기">
+      <created>1669959201128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669959201128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성">
+      <created>1670314923054</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670314923054</updated>
+    </task>
+    <task id="LOCAL-00003" summary="게시글 꾸미기 기능 생성 진행 중">
+      <created>1670569630920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670569630920</updated>
+    </task>
+    <task id="LOCAL-00004" summary="게시글 꾸미기 기능 생성 진행 중">
+      <created>1670569680468</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670569680468</updated>
+    </task>
+    <task id="LOCAL-00005" summary="DB 연결&#10;DBinfo DB 정보 분리">
+      <created>1670839174033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670839174033</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Object 클래스 사용 x&#10;Linkedhashmap으로 변경 해봄&#10;&#10;create 기능 생성 진행중">
+      <created>1671090277081</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671090277081</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/kse" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="POST 데이터 받기" />
+    <MESSAGE value="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성" />
+    <MESSAGE value="게시글 꾸미기 기능 생성 진행 중" />
+    <MESSAGE value="DB 연결&#10;DBinfo DB 정보 분리" />
+    <MESSAGE value="Object 클래스 사용 x&#10;Linkedhashmap으로 변경 해봄&#10;&#10;create 기능 생성 진행중" />
+    <option name="LAST_COMMIT_MESSAGE" value="Object 클래스 사용 x&#10;Linkedhashmap으로 변경 해봄&#10;&#10;create 기능 생성 진행중" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

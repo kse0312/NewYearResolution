@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Happy New Year</title>
+        <meta content="text/html"  charset="UTF-8">
+        <link href="style.css" rel="stylesheet">
+        <link href="checkbox.css" rel="stylesheet">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h2 id="subject" onclick="location.href='index.html'">Subject</h2>
+        </div>
+        <div id="container">
+            <form method="post" name="create" accept-charset="UTF-8">
+            <div id="page">
+                <table id="form_table">
+                    <tr  style="text-align:center">
+                        <td colspan="2">
+                            <input type="text" id="f_subject" name="subject" placeholder="Subject">
+                        </td>
+                    </tr>
+                    <tr style="text-align:right">
+                        <input type="hidden" id="f_id" name="user_id">
+                        <td colspan="2">
+                            <input type="text" id="f_name" name="user_name" placeholder="Nickname">
+                        </td>
+                    </tr>
+                    <tr><td >
+                            <table id="text_table">
+                                <tr><td class="numb">1. </td><td><input class="f_text" type="text" name="text_1" maxlength="18"></td></tr>
+                                <tr><td class="numb">2. </td><td><input class="f_text" type="text" name="text_2"></td></tr>
+                                <tr><td class="numb">3. </td><td><input class="f_text" type="text" name="text_3"></td></tr>
+                                <tr><td class="numb">4. </td><td><input class="f_text" type="text" name="text_4"></td></tr>
+                                <tr><td class="numb">5. </td><td><input class="f_text" type="text" name="text_5"></td></tr>
+                                <tr><td class="numb">6. </td><td><input class="f_text" type="text" name="text_6"></td></tr>
+                                <tr><td class="numb">7. </td><td><input class="f_text" type="text" name="text_7"></td></tr>
+                                <tr><td class="numb">8. </td><td><input class="f_text" type="text" name="text_8"></td></tr>
+                                <tr><td class="numb">9. </td><td><input class="f_text" type="text" name="text_9"></td></tr>
+                                <tr><td class="numb">10.</td><td><input class="f_text" type="text" name="text_10"></td></tr>
+                            </table>
+                    </td></tr>
+                </table>
+                <input type="hidden" name="backc">
+                <input type="hidden" name="fontc">
+                <input type="hidden" name="bordc">
+                <input type="hidden" name="linec">
+            </div>
+            <input id="submit_btn" type="submit" value="제출">
+            </form>
+        </div>
+        <div id="options">
+            <button class="pick" id="pick1" onclick="color_change('white','black','gray')">1</button>
+            <button class="pick" id="pick2" onclick="color_change('#282C4E','#F3E4BF','#F3E4BF')">2</button>
+            <table>
+                <tr><td>바깥 테두리</td>
+                    <td>
+                        <input type="checkbox" class="switch" id="switch1" onclick="border1_onoff(this.checked)">
+                        <label for="switch1" class="switch_label" id="switch_label1">
+                            <span id="onf1" class="onf_btn"></span>
+                        </label>
+                    </td></tr>
+                <tr><td>안 테두리</td>
+                    <td>
+                        <input type="checkbox" class="switch" id="switch2" onclick="border2_onoff(this.checked)" checked>
+                        <label for="switch2" class="switch_label" id="switch_label2">
+                            <span id="onf2" class="onf_btn"></span>
+                        </label>
+                    </td></tr>
+                <tr><td>줄</td>
+                    <td>
+                        <input type="checkbox" class="switch" id="switch3" onclick="line_onoff(this.checked)" checked>
+                        <label for="switch3" class="switch_label" id="switch_label3">
+                            <span id="onf3" class="onf_btn"></span>
+                        </label>
+                    </td></tr>
+            </table>
+        </div>
+    </body>
+</html>
+<script>
+    let bodyc = "#8FA5BC"
+    let backc = "white"
+    let bordc = "black"
+    let line = true;
+    let border1 = true;
+    let border2 = true;
+    function color_change(back, font, bord){
+        console.log('color_change');
+        backc = back
+        bordc = bord
+        document.getElementById('page').style.background=back;
+        if(border1)
+            document.getElementById('page').style.borderColor=bord;
+        if(border2)
+            document.getElementById('form_table').style.borderColor=bord;
+        else
+            document.getElementById('form_table').style.borderColor=back;
+        document.getElementById('text_table').style.color=font;
+
+
+        let td = document.getElementById('text_table').getElementsByTagName('td');
+        if(line){
+            for(let i=0;i<td.length;i++){
+                td.item(i).style.borderColor=bord
+            }
+        }else{
+            for(let i=0;i<td.length;i++){
+                td.item(i).style.borderColor=backc
+            }
+        }
+        let text = document.querySelectorAll('input[type=text]');
+        for(let i=0;i<text.length;i++){
+            text.item(i).style.color=font
+        }
+    }
+
+    function border1_onoff(onoff){
+        if(onoff){
+            border1 = true;
+            document.getElementById('page').style.borderColor=bordc;
+        }else{
+            border1 = false;
+            document.getElementById('page').style.borderColor=bodyc;
+        }
+    }
+    function border2_onoff(onoff){
+        if(onoff){
+            border2 = true;
+            document.getElementById('form_table').style.borderColor=bordc;
+        }else{
+            border2 = false;
+            document.getElementById('form_table').style.borderColor=backc;
+        }
+    }
+    function border_round(onoff){
+        if(onoff){
+            document.getElementById('page').style.borderRadius='15px';
+        }else{
+
+            document.getElementById('page').style.borderRadius='0px';
+        }
+    }
+    function line_onoff(onoff){
+        let td = document.getElementById('text_table').getElementsByTagName('td');
+        if(onoff){
+            line = true;
+            for(let i=0;i<td.length;i++){
+                td.item(i).style.borderColor=bordc
+            }
+        }else{
+            line = false;
+            for(let i=0;i<td.length;i++){
+                td.item(i).style.borderColor=backc
+            }
+        }
+    }
+</script>
