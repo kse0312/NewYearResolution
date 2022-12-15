@@ -1,38 +1,58 @@
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
 import java.io.*;
 import java.net.Socket;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class PostThread implements Runnable{
     private static final String DEFAULT_FILE_PATH = "index.html";
-    private Socket socket;
-    private String filePath;
-    private User content;
+    private final Socket socket;
+    private final String filePath;
+    private final Map<String, String> content;
+    private final MongoClient mongoClient = new MongoClient( new MongoClientURI(DBinfo.getDB_URI()));
+    private final MongoDatabase mongoDB = mongoClient.getDatabase(DBinfo.getDB());
+    private final MongoCollection<Document> books = mongoDB.getCollection(DBinfo.getDB_C());
     public PostThread(Socket clientSocket, String filePath, char[] body) throws IOException {
         this.socket = clientSocket;
         this.filePath = filePath;
-        
+        this.content = new LinkedHashMap<String, String>();
+
         //URL 형식으로 데이터가 날아 오기 때문에 URL Decoding 해줘야 함 안하면 한글 깨짐
         String decodeData = URLDecoder.decode(String.valueOf(body), StandardCharsets.UTF_8);
         //쪼개기
         String[] Data = decodeData.split("&");
-        System.out.println(Arrays.toString(Data));
-        for(int i = 0;i<Data.length;i++){
-            String[] temp = Data[i].split("=");
-            if(temp.length==1) Data[i]= "";
-            else Data[i]=temp[1];
-        }
+        for (String datum : Data) {
+            String[] temp = datum.split("=");
+            if (temp.length == 1) content.put(temp[0], "");
+            else content.put(temp[0], temp[1]);
 
-        this.content = new User(Data);
+        }
     }
 
     @Override
     public void run() {
         System.out.println("POST Thread : Ready");
 
-        /**content database에 저장해야 돼*/
-        System.out.println(content);
+//        Document doc = new Document()
+//                .append("passwd","Password")
+//                .append("name", "Nickname")         // 닉네임
+//                .append("subject","Subject")
+//                .append("count", "Count")           // 개수
+//                .append("target","Target")          // 목표 COUNT만큼 저장 0~9번 **
+//                .append("backc","#FFF")
+//                .append("fontc","#000")
+//                .append("bordc","")
+//                .append("linec","");
+//        books.insertOne(doc);
+
+        System.out.println("map: "+content);
         try(DataOutputStream dout = new DataOutputStream(socket.getOutputStream())){
             System.out.println("POST Thread : DataOutputStream Ready");
 

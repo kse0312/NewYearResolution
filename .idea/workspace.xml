@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="게시글 꾸미기 기능 생성 진행 중">
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="DB 연결&#10;DBinfo DB 정보 분리">
+      <change afterPath="$PROJECT_DIR$/checkbox.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/DBinfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PostThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -118,7 +120,10 @@
       <workItem from="1670570481829" duration="3297000" />
       <workItem from="1670588239126" duration="2928000" />
       <workItem from="1670594859425" duration="695000" />
-      <workItem from="1670827281818" duration="3509000" />
+      <workItem from="1670827281818" duration="3782000" />
+      <workItem from="1670839344594" duration="539000" />
+      <workItem from="1671077418801" duration="454000" />
+      <workItem from="1671077898592" duration="10823000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
@@ -148,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670569680468</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="DB 연결&#10;DBinfo DB 정보 분리">
+      <created>1670839174033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670839174033</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +206,8 @@
     <MESSAGE value="POST 데이터 받기" />
     <MESSAGE value="User object 생성 Post data 저장&#10;게시판/게시글 생성 html 생성" />
     <MESSAGE value="게시글 꾸미기 기능 생성 진행 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="게시글 꾸미기 기능 생성 진행 중" />
+    <MESSAGE value="DB 연결&#10;DBinfo DB 정보 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB 연결&#10;DBinfo DB 정보 분리" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
