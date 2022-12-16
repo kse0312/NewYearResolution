@@ -40,19 +40,12 @@ public class PostThread implements Runnable{
     public void run() {
         System.out.println("POST Thread : Ready");
 
-//        Document doc = new Document()
-//                .append("passwd","Password")
-//                .append("name", "Nickname")         // 닉네임
-//                .append("subject","Subject")
-//                .append("count", "Count")           // 개수
-//                .append("target","Target")          // 목표 COUNT만큼 저장 0~9번 **
-//                .append("backc","#FFF")
-//                .append("fontc","#000")
-//                .append("bordc","")
-//                .append("linec","");
-//        books.insertOne(doc);
-
-        System.out.println("map: "+content);
+        Document doc = new Document();
+        for(String key : content.keySet()){
+            doc.append(key,content.get(key));
+        }
+        System.out.println(doc);
+        books.insertOne(doc);
         try(DataOutputStream dout = new DataOutputStream(socket.getOutputStream())){
             System.out.println("POST Thread : DataOutputStream Ready");
 

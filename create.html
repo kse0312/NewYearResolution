@@ -2,11 +2,8 @@
     <head>
         <title>Happy New Year</title>
         <meta content="text/html"  charset="UTF-8">
-        <link href="style.css" rel="stylesheet">
+        <link href="style.css"    rel="stylesheet">
         <link href="checkbox.css" rel="stylesheet">
-        <style>
-
-        </style>
     </head>
     <body>
         <div id="header">
@@ -42,17 +39,20 @@
                             </table>
                     </td></tr>
                 </table>
-                <input type="hidden" name="backc">
-                <input type="hidden" name="fontc">
-                <input type="hidden" name="bordc">
-                <input type="hidden" name="linec">
+                <input type="hidden" id="back_color" name="backc" value="#ffffff">
+                <input type="hidden" id="font_color" name="fontc" value="#000000">
+                <input type="hidden" id="bord_color1" name="bordc_1" value="#8FA5BC">
+                <input type="hidden" id="bord_color2" name="bordc_2" value="#000000">
+                <input type="hidden" id="line_color" name="linec" value="#000000">
             </div>
             <input id="submit_btn" type="submit" value="제출">
             </form>
         </div>
         <div id="options">
-            <button class="pick" id="pick1" onclick="color_change('white','black','gray')">1</button>
-            <button class="pick" id="pick2" onclick="color_change('#282C4E','#F3E4BF','#F3E4BF')">2</button>
+            <input type='color' id="back_c" value="#ffffff"/>
+            <input type='color' id="font_c" value="#000000"/>
+            <input type='color' id="bord_c" value="#000000"/>
+            <input type='color' id="line_c" value="#000000"/>
             <table>
                 <tr><td>바깥 테두리</td>
                     <td>
@@ -80,80 +80,84 @@
     </body>
 </html>
 <script>
-    let bodyc = "#8FA5BC"
-    let backc = "white"
-    let bordc = "black"
-    let line = true;
+    let bodyc ="#8FA5BC"
+    let backc = document.getElementById("back_color");
+    let fontc = document.getElementById("font_color");
+    let bordc1 = document.getElementById("bord_color1");
+    let bordc2 = document.getElementById("bord_color2");
+    let linec = document.getElementById("line_color");
+    let line  = true;
     let border1 = true;
     let border2 = true;
-    function color_change(back, font, bord){
-        console.log('color_change');
-        backc = back
-        bordc = bord
-        document.getElementById('page').style.background=back;
+    document.getElementById("back_c").onchange=function (){
+        backc.value = this.value;
+        document.getElementById('page').style.background=backc.value;
+    }
+    document.getElementById("font_c").onchange=function (){
+        fontc.value = this.value;
+        let text = document.querySelectorAll('input[type=text]');
+        for(let i=0;i<text.length;i++) {
+            text.item(i).style.color = fontc.value
+        }
+        document.getElementById('text_table').style.color=fontc.value;
+    }
+    document.getElementById("bord_c").onchange=function (){
+        bordc1.value=this.value;
+        bordc2.value=this.value;
         if(border1)
-            document.getElementById('page').style.borderColor=bord;
+            document.getElementById('page').style.borderColor=bordc1.value;
         if(border2)
-            document.getElementById('form_table').style.borderColor=bord;
+            document.getElementById('form_table').style.borderColor=bordc1.value;
         else
-            document.getElementById('form_table').style.borderColor=back;
-        document.getElementById('text_table').style.color=font;
+            document.getElementById('form_table').style.borderColor=backc.value;
 
-
+    }
+    document.getElementById("line_c").onchange=function (){
+        linec.value=this.value;
         let td = document.getElementById('text_table').getElementsByTagName('td');
         if(line){
             for(let i=0;i<td.length;i++){
-                td.item(i).style.borderColor=bord
+                td.item(i).style.borderColor=linec.value
             }
         }else{
             for(let i=0;i<td.length;i++){
-                td.item(i).style.borderColor=backc
+                td.item(i).style.borderColor=backc.value
             }
         }
-        let text = document.querySelectorAll('input[type=text]');
-        for(let i=0;i<text.length;i++){
-            text.item(i).style.color=font
-        }
+
     }
 
     function border1_onoff(onoff){
         if(onoff){
             border1 = true;
-            document.getElementById('page').style.borderColor=bordc;
+            bordc1.value=document.getElementById("bord_c").value;
         }else{
             border1 = false;
-            document.getElementById('page').style.borderColor=bodyc;
+            bordc1.value=bodyc
         }
+        document.getElementById('page').style.borderColor=bordc1.value;
     }
     function border2_onoff(onoff){
         if(onoff){
             border2 = true;
-            document.getElementById('form_table').style.borderColor=bordc;
+            bordc2.value=document.getElementById("bord_c").value;
         }else{
             border2 = false;
-            document.getElementById('form_table').style.borderColor=backc;
+            bordc2.value=backc.value;
         }
-    }
-    function border_round(onoff){
-        if(onoff){
-            document.getElementById('page').style.borderRadius='15px';
-        }else{
-
-            document.getElementById('page').style.borderRadius='0px';
-        }
+        document.getElementById('form_table').style.borderColor=bordc2.value;
     }
     function line_onoff(onoff){
         let td = document.getElementById('text_table').getElementsByTagName('td');
         if(onoff){
             line = true;
-            for(let i=0;i<td.length;i++){
-                td.item(i).style.borderColor=bordc
-            }
+            linec.value=document.getElementById("line_c").value;
         }else{
             line = false;
-            for(let i=0;i<td.length;i++){
-                td.item(i).style.borderColor=backc
-            }
+            linec.value=backc.value;
+        }
+        for(let i=0;i<td.length;i++){
+            td.item(i).style.borderColor=linec.value
         }
     }
 </script>
