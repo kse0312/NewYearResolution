@@ -1,11 +1,25 @@
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
 public class Main {
+
     public static void main(String[] args) {
+
+
         try(ServerSocket serverSocket = new ServerSocket(8080)){
             System.out.println("[Server Start] Waiting......................");
             Thread getThread;

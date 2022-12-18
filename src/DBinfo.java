@@ -1,5 +1,5 @@
 public class DBinfo {
-    private static final String DB_URI = "mongodb+srv://akwp0317:monkim9860@cluster0.3wbhobf.mongodb.net/NewYears";
+    private static final String DB_URI = "mongodb+srv://akwp0317:monkim9860@cluster0.n0b3o2l.mongodb.net/NewYears";
     private static final String DB = "NewYears";
     private static final String DB_C = "To-do";
 

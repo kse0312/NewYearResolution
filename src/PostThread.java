@@ -1,15 +1,21 @@
+import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.util.JSON;
 import org.bson.Document;
+import org.bson.conversions.Bson;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import java.io.*;
 import java.net.Socket;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PostThread implements Runnable{
     private static final String DEFAULT_FILE_PATH = "index.html";
@@ -38,24 +44,44 @@ public class PostThread implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("POST Thread : Ready");
-
-        Document doc = new Document();
-        for(String key : content.keySet()){
-            doc.append(key,content.get(key));
-        }
-        System.out.println(doc);
-        books.insertOne(doc);
         try(DataOutputStream dout = new DataOutputStream(socket.getOutputStream())){
             System.out.println("POST Thread : DataOutputStream Ready");
 
             File file = file = new File(DEFAULT_FILE_PATH);
-            //if(filePath.length()>1){ file = new File(filePath.substring(1)); }
-            //else{ file = new File(DEFAULT_FILE_PATH);}
-
             int FileLength = (int)file.length();
+            if(Objects.equals(filePath, "/Select")){
+                String test = "test data test";
+                FindIterable<Document> document = books.find();
+                MongoCursor<Document> cursor = document.iterator();
+                JSONObject object;
+                ArrayList<JSONObject> list = new ArrayList<>();
+                //json parsing이 안되던 이유 -> db의 object id가 string 형태가 아니라서 ********************** tq
+                while(cursor.hasNext()){
+                    object = new JSONObject(cursor.next());
+                    String temp =object.get("_id").toString();
+                    object.replace("_id",temp);
+                    list.add(object);
+                    System.out.println(object);
+                }
+                dout.writeBytes("HTTP/1.1 200 OK \r\n");
+                dout.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
+                dout.writeBytes("Content-Length: " + list.toString().length()+ "\r\n");
+                dout.writeBytes("\r\n");
+                dout.writeBytes(list.toString());
+
+                dout.writeBytes("\r\n");
+                dout.flush();
+                System.out.println("POST Thread : Print DB Data");
+
+            }
             //파일이 존재할 경우 읽기
-            if(file.exists()){
+            else if (file.exists()) {
+                Document doc = new Document();
+                for(String key : content.keySet()){
+                    doc.append(key,content.get(key));
+                }
+                books.insertOne(doc);
+                System.out.println("POST Thread : Data insert");
                 FileInputStream in = new FileInputStream(file);
                 byte[] fBytes = new byte[FileLength];
                 in.read(fBytes);
@@ -70,7 +96,7 @@ public class PostThread implements Runnable{
                 dout.writeBytes("\r\n");
                 dout.flush();
                 System.out.println("POST Thread : Print Web Page");
-            }else{
+            } else{
                 System.out.println("POST Thread : RequestFile is not Exist");
             }
             socket.close();

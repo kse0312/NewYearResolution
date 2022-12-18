@@ -1,5 +1,14 @@
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
 import java.io.*;
 import java.net.Socket;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class GetThread implements Runnable{
     // 파일 요청이 없을 경우의 기본 파일
@@ -8,6 +17,8 @@ public class GetThread implements Runnable{
     // 클라이언트와의 접속 소켓
     private Socket socket;
     private String filePath;
+
+
 
     public GetThread(Socket clientSocket, String filePath){
         this.socket = clientSocket;
@@ -23,6 +34,7 @@ public class GetThread implements Runnable{
             else{ file = new File(DEFAULT_FILE_PATH);}
 
             int FileLength = (int)file.length();
+
             //파일이 존재할 경우 읽기
             if(file.exists()){
                 FileInputStream in = new FileInputStream(file);
@@ -31,7 +43,7 @@ public class GetThread implements Runnable{
                 in.close();
 
                 dout.writeBytes("HTTP/1.1 200 OK \r\n");
-                dout.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
+                dout.writeBytes("Content-Type: text/html;charset=UTF-8\r\n");
                 dout.writeBytes("Content-Length: " + FileLength + "\r\n");
                 dout.writeBytes("\r\n");
                 dout.write(fBytes, 0, FileLength);
