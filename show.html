@@ -90,6 +90,15 @@
         console.log("delete")
         var input = prompt("정말 삭제하시겠습니까?\n비밀번호를 입력해주세요.");
         if(input === res.user_id){
+            request.open('POST', '/Delete?'+id);
+            request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+            request.send();
+            request.onreadystatechange = function(event){
+                if(request.readyState === 4 && request.status === 200) {
+                    console.log(request.responseURL);
+                    location.href=request.responseURL;
+                }
+            }
             alert("삭제");
         }else{
             alert("비밀번호가 틀렸습니다.");

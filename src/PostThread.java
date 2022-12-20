@@ -1,4 +1,3 @@
-import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
@@ -100,6 +99,15 @@ public class PostThread implements Runnable{
                 dout.writeBytes("HTTP/1.1 302 Found \r\n");
                 dout.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
                 dout.writeBytes("Location: "+"http://localhost:8000/show.html?id="+id+" \r\n");
+                dout.writeBytes("\r\n");
+                dout.writeBytes("\r\n");
+                dout.flush();
+            }else if(filePath.equals("Delete")){
+                books.findOneAndDelete(eq("_id", new ObjectId(param_arr[1])));
+                System.out.println("POST Thread : Data Delete");
+                dout.writeBytes("HTTP/1.1 302 Found \r\n");
+                dout.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
+                dout.writeBytes("Location: "+"http://localhost:8000/"+" \r\n");
                 dout.writeBytes("\r\n");
                 dout.writeBytes("\r\n");
                 dout.flush();
