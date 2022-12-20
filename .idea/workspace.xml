@@ -4,20 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="insert 추가">
-      <change afterPath="$PROJECT_DIR$/jar/json-simple-1.1.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="게시판 출력 시 한글 깨짐 수정&#10;제목/이름/비번 없을 경우 SUBMIT 막기">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/show_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/checkbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project/GetThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/GetThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBinfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GetThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PostThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +36,8 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -60,26 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Project/jar/json-simple-1.1.1.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/user/Desktop/Project/jar/json-simple-1.1.1.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Project\jar" />
@@ -138,7 +145,14 @@
       <workItem from="1671168445725" duration="4246000" />
       <workItem from="1671173989296" duration="1198000" />
       <workItem from="1671338958320" duration="5187000" />
-      <workItem from="1671345652730" duration="19675000" />
+      <workItem from="1671345652730" duration="20028000" />
+      <workItem from="1671371621372" duration="5000" />
+      <workItem from="1671371649331" duration="567000" />
+      <workItem from="1671431588901" duration="574000" />
+      <workItem from="1671435875615" duration="6825000" />
+      <workItem from="1671494860244" duration="8441000" />
+      <workItem from="1671509689536" duration="975000" />
+      <workItem from="1671512763080" duration="8428000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
@@ -196,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671170650375</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="index에서 xmlrequest로 DB 데이터 받아 게시판 출력">
+      <created>1671371255581</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671371255581</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +267,9 @@
     <MESSAGE value="Object 클래스 사용 x&#10;Linkedhashmap으로 변경 해봄&#10;&#10;create 기능 생성 진행중" />
     <MESSAGE value="오류 수정" />
     <MESSAGE value="insert 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert 추가" />
+    <MESSAGE value="index에서 xmlrequest로 DB 데이터 받아 게시판 출력" />
+    <MESSAGE value="게시판 출력 시 한글 깨짐 수정&#10;제목/이름/비번 없을 경우 SUBMIT 막기" />
+    <option name="LAST_COMMIT_MESSAGE" value="게시판 출력 시 한글 깨짐 수정&#10;제목/이름/비번 없을 경우 SUBMIT 막기" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

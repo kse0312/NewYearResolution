@@ -5,13 +5,12 @@
     width: 32px;
     height: 19px;
     background: #fff;
-    border: 2px solid #daa;
+    border: 2px solid #8D847F;
     border-radius: 20px;
     transition: 0.2s;
-    margin-bottom: -6px;
 }
 .switch_label:hover {
-    background: #efefef;
+    background: white;
 }
 .onf_btn {
     position: absolute;
@@ -21,20 +20,20 @@
     width: 15px;
     height: 15px;
     border-radius: 20px;
-    background: #daa;
+    background: #8D847F;
     transition: 0.2s;
 }
 .switch{
-    visibility: hidden;
+    display: none;
 }
 /* checking style */
 #switch1:checked+#switch_label1 {
-    background: #c44;
-    border: 2px solid #c44;
+    background: #787473;
+    border: 2px solid #787473;
 }
 
 #switch1:checked+#switch_label1:hover {
-    background: #e55;
+    background: #8D8684;
 }
 
 /* move */
@@ -46,12 +45,12 @@
 
 /* checking style */
 #switch2:checked+#switch_label2 {
-    background: #c44;
-    border: 2px solid #c44;
+    background: #787473;
+    border: 2px solid #787473;
 }
 
 #switch2:checked+#switch_label2:hover {
-    background: #e55;
+    background: #8D8684;
 }
 
 /* move */
@@ -63,12 +62,12 @@
 
 /* checking style */
 #switch3:checked+#switch_label3 {
-    background: #c44;
-    border: 2px solid #c44;
+    background: #787473;
+    border: 2px solid #787473;
 }
 
 #switch3:checked+#switch_label3:hover {
-    background: #e55;
+    background: #8D8684;
 }
 
 /* move */

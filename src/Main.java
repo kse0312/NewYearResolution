@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        try(ServerSocket serverSocket = new ServerSocket(8080)){
+        try(ServerSocket serverSocket = new ServerSocket(8000)){
             System.out.println("[Server Start] Waiting......................");
             Thread getThread;
             Thread postThread;

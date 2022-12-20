@@ -28,12 +28,22 @@ public class GetThread implements Runnable{
     public void run() {
         try(DataOutputStream dout = new DataOutputStream(socket.getOutputStream())){
             System.out.println("GET Thread : DataOutputStream Ready");
-
+            
+            //파일명 정리
+            String[] path_arr = filePath.split("/");
+            String[] param_arr = null;
             File file = null;
-            if(filePath.length()>1){ file = new File(filePath.substring(1)); }
-            else{ file = new File(DEFAULT_FILE_PATH);}
-
-            int FileLength = (int)file.length();
+            int FileLength =0;
+            if(path_arr.length==0){ filePath=DEFAULT_FILE_PATH;}
+            else {
+                filePath = path_arr[path_arr.length-1];
+                if(filePath.contains("?")){
+                    param_arr = filePath.split("\\?");
+                    filePath = param_arr[0];
+                }
+            }
+            file = new File(filePath);
+            FileLength = (int)file.length();
 
             //파일이 존재할 경우 읽기
             if(file.exists()){
@@ -60,4 +70,6 @@ public class GetThread implements Runnable{
             throw new RuntimeException(e);
         }
     }
+
+
 }

@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Happy New Year</title>
+    <meta content="text/html"  charset="UTF-8">
+    <link href="style.css"    rel="stylesheet">
+    <link href="show_style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.js">
+</script>
+</head>
+<body>
+<div id="header">
+    <h2 id="subject" onclick="location.href='index.html'">New Year Plan</h2>
+</div>
+<div id="container">
+    <div id="page">
+        <table id="form_table">
+            <tr  style="text-align:center">
+                <td >
+                    <p type="text" id="f_subject" name="subject" placeholder="Subject"></p>
+                </td>
+            </tr>
+            <tr >
+                <td id="f_name" style="text-align: right">
+                </td>
+            </tr>
+            <tr><td >
+            <table id="text_table">
+            </table>
+            </td></tr>
+        </table>
+    </div>
+    <div id="show_op_div">
+        <button id="download"><img src = "/download.png" width="26px"></button>
+        <button id="setting"><img src = "/delete.png" width="26px"></button>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    const url = new URL(window.location.href);
+    const param = url.searchParams;
+    const id = param.get("id");
+    console.log(id);
+    const request = new XMLHttpRequest();
+    // 2. 요청 초기화
+    request.open('POST', '/Select?'+id);
+    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+    // 4. onreadystatechage 이벤트리스너 등록
+    request.send();
+
+
+    let res = null;
+    request.onreadystatechange = function(event){
+        if(request.readyState === 4 && request.status === 200) {
+            res = JSON.parse(request.responseText);
+            res = res[0];
+            //글자 넣기
+            document.getElementById("f_subject").innerHTML=res.subject;
+            document.getElementById("f_name").innerHTML=res.user_name;
+            for(let i=1;i<11;i++){
+                document.getElementById("text_table").innerHTML
+                    += "<tr><td class=\"numb\">"+i+". </td><td>"+res["text_"+i]+"</td></tr>"
+            }
+            //background
+            document.getElementById('page').style.background=res.backc;
+            //font color
+            document.getElementById('form_table').style.color=res.fontc;
+            document.getElementById('text_table').style.color=res.fontc;
+            //bord color
+            document.getElementById('page').style.borderColor=res.bordc_1;
+            document.getElementById('form_table').style.borderColor=res.bordc_2;
+            //line color
+            const td = document.getElementById('text_table').getElementsByTagName('td');
+            for(let i=0;i<td.length;i++){
+                td.item(i).style.borderColor=res.linec;
+            }
+        }
+    }
+    document.getElementById("download").onclick=function (){
+        console.log("download");
+        let page = document.getElementById('page');
+        // html2canvas(page).then(function (canvas){
+        //     var link = document.createElement("a");
+        //     link.href = canvas.toDataURL("image/jpeg");
+        //     link.download = id+'.jpg';
+        //     link.click();
+        // });
+    }
+    document.getElementById("setting").onclick=function (){
+        console.log("delete")
+        var input = prompt("정말 삭제하시겠습니까?\n비밀번호를 입력해주세요.");
+        if(input === res.user_id){
+            alert("삭제");
+        }else{
+            alert("비밀번호가 틀렸습니다.");
+        }
+    }
+</script>

@@ -1,19 +1,20 @@
 <html>
 <head>
     <title>Happy New Year</title>
-    <meta content="text/html"  charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="style.css" rel="stylesheet">
+    <link href="index_style.css" rel="stylesheet">
 </head>
 <body>
     <div id="header">
-        <h2 id="subject">Subject</h2>
+        <h2 id="subject" onclick="location.href='index.html'">New Year Plan</h2>
+        <div id="search_div"><b>SEARCH : &nbsp</b><input type="text" id="search"></div>
     </div>
     <div id="container">
         <div id="gallery">
-
         </div>
         <div id="create_div">
-            <p>CREATE!</p>
+            <h3>CREATE!</h3>
             <button id="create" onclick="location.href='create.html'">+</button>
         </div>
     </div>
@@ -23,21 +24,17 @@
 </html>
 <script>
     const request = new XMLHttpRequest();
-    //
-    // // 2. 요청 초기화
+    // 2. 요청 초기화
     request.open('POST', '/Select');
-    // // 3. 요청 전송
-    // request.send();
-    //
-    // // 4. onreadystatechage 이벤트리스너 등록
+    // 4. onreadystatechage 이벤트리스너 등록
     var gal = document.getElementById("gallery");
+    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
     request.onreadystatechange = function(event) {
         if(request.readyState === 4 && request.status === 200) {
             var res = JSON.parse(request.responseText);
             for (const re of res) {
-                console.log(re);
                 gal.innerHTML+=
-                    "<div id='page' id='"+re["_id"]+"' style = 'border-color:"+re['bordc_1']+";background: "+re['backc']+"'>"+
+                    "<div id='page' id='"+re["_id"]+"' onclick=\"location.href='show.html?id="+re['_id']+"'\" style = 'border-color:"+re['bordc_1']+";background: "+re['backc']+"'>"+
                     "<table id='form_table' style='color:"+re['fontc']+";border-color:"+re['bordc_2']+"'>" +
                     "<tr style='text-align:center'><td>\n" +
                     "   <p  id='f_subject'>"+re["subject"]+"</p>\n" +
@@ -58,54 +55,14 @@
                     "       <tr><td class='numb'>9. </td><td><p class='f_text'>"+re["text_9"]+"</p></td></tr>\n" +
                     "       <tr><td class='numb'>10.</td><td><p class='f_text'>"+re["text_10"]+"</p></td></tr>\n" +
                     "   </table>\n" +
-                    "</td></tr></table></div>"
+                    "</td></tr></table></div>\n"
                 var temp = document.getElementById('tb'+re["_id"]).getElementsByTagName('td');
                 for(let i=0;i<temp.length;i++){
                     temp.item(i).style.borderColor=re['linec'];
                 }
             }
-
-
-        }else{
-            console.log("no data");
         }
     };
 
     request.send();
-    //     // 1) 데이터를 다 받았고, 2) 응답코드 200(성공)을 받았는지 체크
-    //     //if(request.readyState === 4 && request.status === 200){
-    //     request.addEventListener('loadend', (event) => { })
-    //     if(request.status === 200){
-    //         // 응답받은 데이터 체크
-    //
-    //         var res = request.response;
-    //         var gal = document.getElementById("gallery");
-    //         gal.innerHTML+=res;
-    //             // gal.innerHTML+=
-    //             "<div id='page'><table id='form_table'>" +
-    //             //     "<tr style=\"text-align:center\"><td>\n" +
-    //             //     "   <p  id=\"f_subject\">"+res+"</p>\n" +
-    //             //     "</td></tr>\n" +
-    //             //     "<tr style=\"text-align:right\"><td>\n" +
-    //             //     "   <p id=\"f_name\">+i.name+</p>\n" +
-    //             //     "</td></tr>\n" +
-    //             //     "<tr><td >\n" +
-    //             //     "   <table id=\"text_table\">\n" +
-    //             //     "       <tr><td class=\"numb\">1. </td><td><p class=\"f_text\">"+i.text_1+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">2. </td><td><p class=\"f_text\">"+i.text_2+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">3. </td><td><p class=\"f_text\">"+i.text_3+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">4. </td><td><p class=\"f_text\">"+i.text_4+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">5. </td><td><p class=\"f_text\">"+i.text_5+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">6. </td><td><p class=\"f_text\">"+i.text_6+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">7. </td><td><p class=\"f_text\">"+i.text_7+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">8. </td><td><p class=\"f_text\">"+i.text_8+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">9. </td><td><p class=\"f_text\">"+i.text_9+"</p></td></tr>\n" +
-    //             //     "       <tr><td class=\"numb\">10.</td><td><p class=\"f_text\">"+i.text_10+"</p></td></tr>\n" +
-    //             //     "   </table>\n" +
-    //             //     "</td></tr></table></div>"
-    //     }else{
-    //         document.getElementById("gallery").innerHTML="no data"
-    //     }
-    // }
-
 </script>
