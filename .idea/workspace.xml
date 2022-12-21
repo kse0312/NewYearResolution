@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="client socket을 처리해주는 thread 추가">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkbox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/download.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/GetThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/GetThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GetThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-    </list>
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="get thread 파일 주소 요청 시&#10;폴더 내에 있는 파일 탐색도 가능하도록 변경" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -248,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671632150638</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="get thread 파일 주소 요청 시&#10;폴더 내에 있는 파일 탐색도 가능하도록 변경">
+      <created>1671639565111</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671639565111</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +295,8 @@
     <MESSAGE value="게시글 삭제 기능 완료" />
     <MESSAGE value="검색 기능 완료" />
     <MESSAGE value="ip 수정&#10;이미지 생성 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="ip 수정&#10;이미지 생성 수정" />
+    <MESSAGE value="get thread 파일 주소 요청 시&#10;폴더 내에 있는 파일 탐색도 가능하도록 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="get thread 파일 주소 요청 시&#10;폴더 내에 있는 파일 탐색도 가능하도록 변경" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
