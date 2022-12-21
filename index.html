@@ -24,14 +24,31 @@
 </html>
 <script>
     const request = new XMLHttpRequest();
-    // 2. 요청 초기화
-    request.open('POST', '/Select');
-    // 4. onreadystatechage 이벤트리스너 등록
-    var gal = document.getElementById("gallery");
-    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+    const gal = document.getElementById("gallery");
+    const search = document.getElementById("search");
+
+    /** 시작 시 게시글 불러오기 */
+    window.onload = function (){
+        request.open('POST', '/Select');
+        request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+        request.send();
+    }
+    /** 검색 시 게시글 불러오기 */
+    search.addEventListener('keyup', (e) => {
+        if(e.key==='Enter'){
+            gal.innerHTML=null;
+            request.open('POST', '/Select?message='+search.value);
+            request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
+            request.send();
+        }
+    });
+
+    /** request 응답 받기 */
     request.onreadystatechange = function(event) {
+        // 모든 정보 도착 확인
         if(request.readyState === 4 && request.status === 200) {
             var res = JSON.parse(request.responseText);
+            //출력
             for (const re of res) {
                 gal.innerHTML+=
                     "<div id='page' id='"+re["_id"]+"' onclick=\"location.href='show.html?id="+re['_id']+"'\" style = 'border-color:"+re['bordc_1']+";background: "+re['backc']+"'>"+
@@ -63,6 +80,4 @@
             }
         }
     };
-
-    request.send();
 </script>

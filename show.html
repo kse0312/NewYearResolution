@@ -31,21 +31,23 @@
     </div>
     <div id="show_op_div">
         <button id="download"><img src = "/download.png" width="26px"></button>
-        <button id="setting"><img src = "/delete.png" width="26px"></button>
+        <button id="delete"><img src = "/delete.png" width="26px"></button>
     </div>
 </div>
 </body>
 </html>
 <script>
+    //URL 에서 param 가져오기
     const url = new URL(window.location.href);
     const param = url.searchParams;
     const id = param.get("id");
-    console.log(id);
+
+    //request 전송
     const request = new XMLHttpRequest();
-    // 2. 요청 초기화
-    request.open('POST', '/Select?'+id);
+    //request 초기화
+    request.open('POST', '/Select?id='+id);
     request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
-    // 4. onreadystatechage 이벤트리스너 등록
+    //request 전송
     request.send();
 
 
@@ -76,6 +78,8 @@
             }
         }
     }
+
+    /** 이미지 다운로드 css가 같이 전송되지 않는 문제 있음 */
     document.getElementById("download").onclick=function (){
         console.log("download");
         let page = document.getElementById('page');
@@ -86,20 +90,22 @@
         //     link.click();
         // });
     }
-    document.getElementById("setting").onclick=function (){
-        console.log("delete")
+
+    /** 게시글 삭제 */
+    document.getElementById("delete").onclick=function (){
         var input = prompt("정말 삭제하시겠습니까?\n비밀번호를 입력해주세요.");
+        // 비밀번호 확이
         if(input === res.user_id){
+            //삭제 요청 전송
             request.open('POST', '/Delete?'+id);
             request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
             request.send();
+            //완료 후 페이지 이동
             request.onreadystatechange = function(event){
                 if(request.readyState === 4 && request.status === 200) {
-                    console.log(request.responseURL);
                     location.href=request.responseURL;
                 }
             }
-            alert("삭제");
         }else{
             alert("비밀번호가 틀렸습니다.");
         }

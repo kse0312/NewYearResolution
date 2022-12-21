@@ -13,8 +13,9 @@ import java.net.Socket;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.regex.Pattern;
 
-import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.*;
 
 public class PostThread implements Runnable{
     private static final String DEFAULT_FILE_PATH = "index.html";
@@ -62,9 +63,16 @@ public class PostThread implements Runnable{
             byte[] fData = null;
             if(filePath.equals("Select")){
                 FindIterable<Document> document = null;
+                //param값이 있다.
                 if(param_arr!=null){
-                    if(param_arr.length>1)
-                        document = books.find(eq("_id", new ObjectId(param_arr[1])));
+                    String[] param = param_arr[1].split("=");
+                    if(param[0].equals("id")){
+                        document = books.find(eq("_id", new ObjectId(param[1])));
+                    }else if(param[0].equals("message")){
+                        String dec_msg = URLDecoder.decode(param[1], StandardCharsets.UTF_8);
+                        System.out.println(dec_msg);
+                        document = books.find(or(in("subject", Pattern.compile(dec_msg)),in("user_name",Pattern.compile(dec_msg))));
+                    }
                 }else{
                     document = books.find();
                 }

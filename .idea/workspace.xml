@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="게시판 출력 시 한글 깨짐 수정&#10;제목/이름/비번 없을 경우 SUBMIT 막기">
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="상세 페이지 생성&#10;삭제/이미지 출력 아이콘 추가&#10;게시글 생성 후 상세 페이지로 이동">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/GetThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/GetThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/move.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GetThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PostThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,6 +139,8 @@
       <workItem from="1671494860244" duration="8441000" />
       <workItem from="1671509689536" duration="975000" />
       <workItem from="1671512763080" duration="9716000" />
+      <workItem from="1671581575399" duration="963000" />
+      <workItem from="1671583485555" duration="3253000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
@@ -211,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671522507423</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="게시글 삭제 기능 완료">
+      <created>1671524553059</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671524553059</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +272,8 @@
     <MESSAGE value="index에서 xmlrequest로 DB 데이터 받아 게시판 출력" />
     <MESSAGE value="게시판 출력 시 한글 깨짐 수정&#10;제목/이름/비번 없을 경우 SUBMIT 막기" />
     <MESSAGE value="상세 페이지 생성&#10;삭제/이미지 출력 아이콘 추가&#10;게시글 생성 후 상세 페이지로 이동" />
-    <option name="LAST_COMMIT_MESSAGE" value="상세 페이지 생성&#10;삭제/이미지 출력 아이콘 추가&#10;게시글 생성 후 상세 페이지로 이동" />
+    <MESSAGE value="게시글 삭제 기능 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="게시글 삭제 기능 완료" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
