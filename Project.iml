@@ -26,5 +26,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="html2canvas" level="application" />
+    <orderEntry type="library" name="html2canvas" level="application" />
   </component>
 </module>
