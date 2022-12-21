@@ -36,8 +36,12 @@
     /** 검색 시 게시글 불러오기 */
     search.addEventListener('keyup', (e) => {
         if(e.key==='Enter'){
+            if(search.value===""){
+                request.open('POST', '/Select');
+            }else{
+                request.open('POST', '/Select?message='+search.value);
+            }
             gal.innerHTML=null;
-            request.open('POST', '/Select?message='+search.value);
             request.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=UTF-8');
             request.send();
         }
@@ -56,21 +60,21 @@
                     "<tr style='text-align:center'><td>\n" +
                     "   <p  id='f_subject'>"+re["subject"]+"</p>\n" +
                     "</td></tr>\n" +
-                    "<tr style='text-align:right'><td>\n" +
+                    "<tr style='text-align:right' id='f_name'><td>\n" +
                     "  "+ re["user_name"] +
                     "</td></tr>\n" +
                     "<tr><td >\n" +
                     "   <table class='text_table' id='tb"+re['_id']+"' style='color:"+re['fontc']+"'>\n" +
-                    "       <tr><td  class='numb'>1. </td><td><p class='f_text'>"+re["text_1"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>2. </td><td><p class='f_text'>"+re["text_2"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>3. </td><td><p class='f_text'>"+re["text_3"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>4. </td><td><p class='f_text'>"+re["text_4"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>5. </td><td><p class='f_text'>"+re["text_5"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>6. </td><td><p class='f_text'>"+re["text_6"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>7. </td><td><p class='f_text'>"+re["text_7"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>8. </td><td><p class='f_text'>"+re["text_8"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>9. </td><td><p class='f_text'>"+re["text_9"]+"</p></td></tr>\n" +
-                    "       <tr><td class='numb'>10.</td><td><p class='f_text'>"+re["text_10"]+"</p></td></tr>\n" +
+                    "       <tr><td class='numb'>1. </td><td class='f_text'>"+re["text_1"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>2. </td><td class='f_text'>"+re["text_2"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>3. </td><td class='f_text'>"+re["text_3"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>4. </td><td class='f_text'>"+re["text_4"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>5. </td><td class='f_text'>"+re["text_5"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>6. </td><td class='f_text'>"+re["text_6"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>7. </td><td class='f_text'>"+re["text_7"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>8. </td><td class='f_text'>"+re["text_8"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>9. </td><td class='f_text'>"+re["text_9"]+"</td></tr>\n" +
+                    "       <tr><td class='numb'>10.</td><td class='f_text'>"+re["text_10"]+"</td></tr>\n" +
                     "   </table>\n" +
                     "</td></tr></table></div>\n"
                 var temp = document.getElementById('tb'+re["_id"]).getElementsByTagName('td');

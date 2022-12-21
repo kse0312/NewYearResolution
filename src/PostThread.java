@@ -63,7 +63,7 @@ public class PostThread implements Runnable{
             byte[] fData = null;
             if(filePath.equals("Select")){
                 FindIterable<Document> document = null;
-                //param값이 있다.
+                //param값이 있다. 상세보기 페이지 | 게시판 검색
                 if(param_arr!=null){
                     String[] param = param_arr[1].split("=");
                     if(param[0].equals("id")){
@@ -106,7 +106,7 @@ public class PostThread implements Runnable{
                 System.out.println("POST Thread : Data insert");
                 dout.writeBytes("HTTP/1.1 302 Found \r\n");
                 dout.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
-                dout.writeBytes("Location: "+"http://localhost:8000/show.html?id="+id+" \r\n");
+                dout.writeBytes("Location: "+"http://121.167.30.75:8080/show.html?id="+id+" \r\n");
                 dout.writeBytes("\r\n");
                 dout.writeBytes("\r\n");
                 dout.flush();
@@ -115,7 +115,7 @@ public class PostThread implements Runnable{
                 System.out.println("POST Thread : Data Delete");
                 dout.writeBytes("HTTP/1.1 302 Found \r\n");
                 dout.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
-                dout.writeBytes("Location: "+"http://localhost:8000/"+" \r\n");
+                dout.writeBytes("Location: "+"http://121.167.30.75:8080/"+" \r\n");
                 dout.writeBytes("\r\n");
                 dout.writeBytes("\r\n");
                 dout.flush();
