@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.Socket;
+import java.util.Arrays;
 
 public class GetThread implements Runnable{
     // 파일 요청이 없을 경우의 기본 파일
@@ -19,7 +20,7 @@ public class GetThread implements Runnable{
     public void run() {
         try(DataOutputStream dout = new DataOutputStream(socket.getOutputStream())){
             System.out.println("GET Thread : DataOutputStream Ready");
-            
+
             //파일명 정리
             String[] path_arr = filePath.split("/");
             String[] param_arr = null;
@@ -27,10 +28,12 @@ public class GetThread implements Runnable{
             int FileLength =0;
             if(path_arr.length==0){ filePath=DEFAULT_FILE_PATH;}
             else {
-                filePath = path_arr[path_arr.length-1];
-                if(filePath.contains("?")){
+                if(path_arr[path_arr.length-1].contains("?")){
                     param_arr = filePath.split("\\?");
-                    filePath = param_arr[0];
+                    filePath=filePath.substring(1,filePath.length()- param_arr[1].length()-1);
+                    System.out.println(filePath);
+                }else{
+                    filePath=filePath.substring(1);
                 }
             }
             file = new File(filePath);

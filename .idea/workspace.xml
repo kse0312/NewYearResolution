@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="ip 수정&#10;이미지 생성 수정">
-      <change afterPath="$PROJECT_DIR$/src/Main2_thread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="client socket을 처리해주는 thread 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/download.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project/GetThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/GetThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/show_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GetThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +155,7 @@
       <workItem from="1671611054149" duration="268000" />
       <workItem from="1671628772833" duration="4802000" />
       <workItem from="1671636272389" duration="555000" />
+      <workItem from="1671639362619" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
