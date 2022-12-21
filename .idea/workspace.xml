@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="검색 기능 완료">
-      <change afterPath="$PROJECT_DIR$/create_style.css" afterDir="false" />
+    <list default="true" id="93d47e44-541c-4d73-bb64-d71ba25f8c73" name="Changes" comment="ip 수정&#10;이미지 생성 수정">
+      <change afterPath="$PROJECT_DIR$/src/Main2_thread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/show_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PostThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PostThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -146,7 +144,8 @@
       <workItem from="1671597550829" duration="2016000" />
       <workItem from="1671602616297" duration="6925000" />
       <workItem from="1671611054149" duration="268000" />
-      <workItem from="1671628772833" duration="1155000" />
+      <workItem from="1671628772833" duration="4802000" />
+      <workItem from="1671636272389" duration="555000" />
     </task>
     <task id="LOCAL-00001" summary="POST 데이터 받기">
       <created>1669959201128</created>
@@ -232,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671588110857</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ip 수정&#10;이미지 생성 수정">
+      <created>1671632150638</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671632150638</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +293,8 @@
     <MESSAGE value="상세 페이지 생성&#10;삭제/이미지 출력 아이콘 추가&#10;게시글 생성 후 상세 페이지로 이동" />
     <MESSAGE value="게시글 삭제 기능 완료" />
     <MESSAGE value="검색 기능 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="검색 기능 완료" />
+    <MESSAGE value="ip 수정&#10;이미지 생성 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="ip 수정&#10;이미지 생성 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
