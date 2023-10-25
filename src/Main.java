@@ -3,8 +3,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * main serversocket을 통해 들어온 정보를 직접 처리 후 thread로 넘기는 경우
- * 동시 접속시 끊긴다.
+ * main serversocket을 통해 들어온 정보 client thread를 생성하여 넘기는 경우
  */
 public class Main {
     public static void main(String[] args) {
